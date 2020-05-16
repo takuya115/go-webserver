@@ -5,5 +5,5 @@ services:
     image: golang:latest
     tty: true # コンテナの起動永続化
     volumes:
-      - ./work:/go/src/work # マウントディレクトリ指定
+      - .:/go/src/work # マウントディレクトリ指定
     working_dir: /go/src/app
