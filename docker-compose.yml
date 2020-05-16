@@ -6,4 +6,8 @@ services:
     tty: true # コンテナの起動永続化
     volumes:
       - .:/go/src/work # マウントディレクトリ指定
+      - golang-ssh:/root/.ssh
     working_dir: /go/src/app
+
+volumes:
+  golang-ssh:
