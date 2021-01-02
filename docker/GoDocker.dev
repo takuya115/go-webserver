@@ -1,0 +1,9 @@
+FROM golang:latest
+
+WORKDIR /go/src/work
+COPY . /go/src/work
+
+ENV GO111MODULE=on
+
+RUN go mod init && \
+    go get -u github.com/gin-gonic/gin

@@ -2,12 +2,14 @@ version: "3" # composeファイルのバーション指定
 services:
   app: # service名
     container_name: golang
-    image: golang:latest
+    build: 
+        context: .
+        dockerfile: docker/GoDocker.dev
     tty: true # コンテナの起動永続化
     volumes:
       - .:/go/src/work # マウントディレクトリ指定
       # - golang-ssh:/root/.ssh
-    working_dir: /go/src/app
+    
 
 # volumes:
 #   golang-ssh:
